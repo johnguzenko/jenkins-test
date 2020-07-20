@@ -15,5 +15,10 @@ pipeline {
                 sh 'ssh -i  /var/jenkins_home/.ssh/id_rsa johnguzenko@193.124.206.36 \'hostname\''
             }
         }
+        stage("Second step") {
+            steps {
+                sh 'ssh -i  /var/jenkins_home/.ssh/id_rsa johnguzenko@193.124.206.36 \'uptime\''
+            }
+        }
     }
 }
